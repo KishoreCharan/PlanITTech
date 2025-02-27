@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2025-02-27T09:33:00.284Z",
-    "end": "2025-02-27T09:33:28.749Z",
-    "duration": 28465,
+    "start": "2025-02-27T22:17:27.338Z",
+    "end": "2025-02-27T22:17:54.913Z",
+    "duration": 27575,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5dde9355-3fb1-4724-ad1b-6fad404ee52b",
+      "uuid": "0ad17435-d08c-471c-bc67-2fa08279f603",
       "title": "",
       "fullFile": "cypress\\e2e\\test.cy.js",
       "file": "cypress\\e2e\\test.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "aac324e6-e3ad-429d-8d06-0603ccb681a2",
+          "uuid": "a53c7ada-ac6f-40de-8cfd-8666e842a0fb",
           "title": "Jupiter Toys - Contact Form Validation & Shopping Cart Verification",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Test Case 1: Verify Error Messages for Mandatory Fields",
               "fullTitle": "Jupiter Toys - Contact Form Validation & Shopping Cart Verification Test Case 1: Verify Error Messages for Mandatory Fields",
               "timedOut": null,
-              "duration": 3986,
+              "duration": 4033,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "// Navigate to the \"Contact\" page.\nContactPage.clickMenuButton(\"Contact\");\n// Click the Submit button without filling the form.\nContactPage.clickSubmitButton();\n// Verify error messages for required fields.\nContactPage.verifyErrorMessage('Forename', 'Forename is required');\nContactPage.verifyErrorMessage('Email', 'Email is required');\nContactPage.verifyErrorMessage('Message', 'Message is required');\n// Enter valid details in the fields.  \nContactPage.enterText(\"Forename\", \"John\");\nContactPage.enterText(\"Email\", \"test@test.com\");\nContactPage.enterText(\"Message\", \"test message\");\n// Verify error messages for required fields.\nContactPage.verifyNoErrorMessage('Forename', 'Forename is required');\nContactPage.verifyNoErrorMessage('Email', 'Email is required');\nContactPage.verifyNoErrorMessage('Message', 'Message is required');",
               "err": {},
-              "uuid": "0005e281-9d64-4159-a93e-559339bd1b44",
-              "parentUUID": "aac324e6-e3ad-429d-8d06-0603ccb681a2",
+              "uuid": "27d5834e-1496-4373-af40-5f6d811a4b7a",
+              "parentUUID": "a53c7ada-ac6f-40de-8cfd-8666e842a0fb",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Test Case 2: Verify Successful Contact Form Submission",
               "fullTitle": "Jupiter Toys - Contact Form Validation & Shopping Cart Verification Test Case 2: Verify Successful Contact Form Submission",
               "timedOut": null,
-              "duration": 22125,
+              "duration": 21138,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "// Navigate to the \"Contact\" page.\nContactPage.clickMenuButton(\"Contact\");\n// Submitting the contact form 5 times using Cypress _.times()\nCypress._.times(5, () => {\n  ContactPage.enterText(\"Forename\", \"John\");\n  ContactPage.enterText(\"Email\", \"test@test.com\");\n  ContactPage.enterText(\"Message\", \"test message\");\n  // Click Submit button and verify success message. \n  ContactPage.clickSubmitButton();\n  ContactPage.verifySuccessMessage(\"Thanks John\");\n});",
               "err": {},
-              "uuid": "e905c8e2-adab-4a28-b4d3-bd7b0746ca44",
-              "parentUUID": "aac324e6-e3ad-429d-8d06-0603ccb681a2",
+              "uuid": "9b01664d-bf87-4ec2-b7ba-e56b6372384a",
+              "parentUUID": "a53c7ada-ac6f-40de-8cfd-8666e842a0fb",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Test Case 3: Verify Cart Item Prices, Subtotals, and Total Amount",
               "fullTitle": "Jupiter Toys - Contact Form Validation & Shopping Cart Verification Test Case 3: Verify Cart Item Prices, Subtotals, and Total Amount",
               "timedOut": null,
-              "duration": 2242,
+              "duration": 2291,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "// Navigate to the \"Shop\" page.\nContactPage.clickMenuButton(\"Shop\");\n// Navigate to the \"Cart\" page and add items to cart.  \nShopPage.addItemsToCart('Stuffed Frog', 'Fluffy Bunny', 'Valentine Bear');\n// Navigate to the \"Cart\" page.\nContactPage.clickMenuButton(\"Cart\");\n// Verify cart values such as price, subtotal, and total after updating  quantity field.  \nCartPage.verifyCartValues();",
               "err": {},
-              "uuid": "04217f02-4b90-4745-9a3f-bf1a088f4202",
-              "parentUUID": "aac324e6-e3ad-429d-8d06-0603ccb681a2",
+              "uuid": "eb4d9489-0e2f-40b4-bcc0-da2971c4127e",
+              "parentUUID": "a53c7ada-ac6f-40de-8cfd-8666e842a0fb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "0005e281-9d64-4159-a93e-559339bd1b44",
-            "e905c8e2-adab-4a28-b4d3-bd7b0746ca44",
-            "04217f02-4b90-4745-9a3f-bf1a088f4202"
+            "27d5834e-1496-4373-af40-5f6d811a4b7a",
+            "9b01664d-bf87-4ec2-b7ba-e56b6372384a",
+            "eb4d9489-0e2f-40b4-bcc0-da2971c4127e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 28353,
+          "duration": 27462,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
