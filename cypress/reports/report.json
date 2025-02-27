@@ -1,0 +1,141 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-27T09:33:00.284Z",
+    "end": "2025-02-27T09:33:28.749Z",
+    "duration": 28465,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5dde9355-3fb1-4724-ad1b-6fad404ee52b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\test.cy.js",
+      "file": "cypress\\e2e\\test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aac324e6-e3ad-429d-8d06-0603ccb681a2",
+          "title": "Jupiter Toys - Contact Form Validation & Shopping Cart Verification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Case 1: Verify Error Messages for Mandatory Fields",
+              "fullTitle": "Jupiter Toys - Contact Form Validation & Shopping Cart Verification Test Case 1: Verify Error Messages for Mandatory Fields",
+              "timedOut": null,
+              "duration": 3986,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Navigate to the \"Contact\" page.\nContactPage.clickMenuButton(\"Contact\");\n// Click the Submit button without filling the form.\nContactPage.clickSubmitButton();\n// Verify error messages for required fields.\nContactPage.verifyErrorMessage('Forename', 'Forename is required');\nContactPage.verifyErrorMessage('Email', 'Email is required');\nContactPage.verifyErrorMessage('Message', 'Message is required');\n// Enter valid details in the fields.  \nContactPage.enterText(\"Forename\", \"John\");\nContactPage.enterText(\"Email\", \"test@test.com\");\nContactPage.enterText(\"Message\", \"test message\");\n// Verify error messages for required fields.\nContactPage.verifyNoErrorMessage('Forename', 'Forename is required');\nContactPage.verifyNoErrorMessage('Email', 'Email is required');\nContactPage.verifyNoErrorMessage('Message', 'Message is required');",
+              "err": {},
+              "uuid": "0005e281-9d64-4159-a93e-559339bd1b44",
+              "parentUUID": "aac324e6-e3ad-429d-8d06-0603ccb681a2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Case 2: Verify Successful Contact Form Submission",
+              "fullTitle": "Jupiter Toys - Contact Form Validation & Shopping Cart Verification Test Case 2: Verify Successful Contact Form Submission",
+              "timedOut": null,
+              "duration": 22125,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Navigate to the \"Contact\" page.\nContactPage.clickMenuButton(\"Contact\");\n// Submitting the contact form 5 times using Cypress _.times()\nCypress._.times(5, () => {\n  ContactPage.enterText(\"Forename\", \"John\");\n  ContactPage.enterText(\"Email\", \"test@test.com\");\n  ContactPage.enterText(\"Message\", \"test message\");\n  // Click Submit button and verify success message. \n  ContactPage.clickSubmitButton();\n  ContactPage.verifySuccessMessage(\"Thanks John\");\n});",
+              "err": {},
+              "uuid": "e905c8e2-adab-4a28-b4d3-bd7b0746ca44",
+              "parentUUID": "aac324e6-e3ad-429d-8d06-0603ccb681a2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Case 3: Verify Cart Item Prices, Subtotals, and Total Amount",
+              "fullTitle": "Jupiter Toys - Contact Form Validation & Shopping Cart Verification Test Case 3: Verify Cart Item Prices, Subtotals, and Total Amount",
+              "timedOut": null,
+              "duration": 2242,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Navigate to the \"Shop\" page.\nContactPage.clickMenuButton(\"Shop\");\n// Navigate to the \"Cart\" page and add items to cart.  \nShopPage.addItemsToCart('Stuffed Frog', 'Fluffy Bunny', 'Valentine Bear');\n// Navigate to the \"Cart\" page.\nContactPage.clickMenuButton(\"Cart\");\n// Verify cart values such as price, subtotal, and total after updating  quantity field.  \nCartPage.verifyCartValues();",
+              "err": {},
+              "uuid": "04217f02-4b90-4745-9a3f-bf1a088f4202",
+              "parentUUID": "aac324e6-e3ad-429d-8d06-0603ccb681a2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0005e281-9d64-4159-a93e-559339bd1b44",
+            "e905c8e2-adab-4a28-b4d3-bd7b0746ca44",
+            "04217f02-4b90-4745-9a3f-bf1a088f4202"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28353,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report.html",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report.html"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
